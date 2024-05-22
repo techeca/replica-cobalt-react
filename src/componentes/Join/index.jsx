@@ -1,7 +1,7 @@
 import BtnCob from "../ui/BtnCob"
 import { lines2 } from "../utils"
 
-export default function Join(){
+export default function Join({title, subtitle}){
 
     return(
         <section className='relative mx-auto mt-16 max-w-full p-6 pb-12 pt-20 lg:px-8'>
@@ -14,9 +14,9 @@ export default function Join(){
               </div>
               <div className='mx-auto max-w-xl text-center'>
                 <h2 className='bg-gradient-to-br from-zinc-100 to-zinc-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl'>
-                See where financial automation can take your business.</h2>
+                {title}</h2>
                 <p className='mx-auto mt-6 max-w-xl text-lg text-zinc-400/80'>
-                  {`The first financial tool you'll love. And the last one you'll ever need.`}
+                  {subtitle}
                 </p>
                 <div className='mt-12 flex items-center justify-center'>
                   <BtnCob text={'Join the waitlist'} />

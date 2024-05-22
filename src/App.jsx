@@ -3,28 +3,36 @@ import Info from './componentes/Info'
 import Features from './componentes/Features'
 import AI from './componentes/AI'
 import Join from './componentes/Join'
-import Foot from './componentes/Foot'
-import NavCob from './componentes/NavCob'
+import Foot from './componentes/ui/Foot'
+import NavCob from './componentes/ui/NavCob'
+
+import appimg from './assets/1.webp'
 
 function App() {
 
   return (
-    <div className="bg-zinc-950 antialiased selection:bg-cyan-300 selection:text-cyan-800 scroll-smooth h-full">
+    <div className="bg-zinc-950 antialiased scroll-smooth h-full">
       <div className="overflow-clip">
-        <header className="absolute inset-x-0 top-0 z-10">
-          <div className="relative flex justify-center">
-            <div className="mx-4 w-full max-w-7xl">
-              <NavCob />
-            </div>
-          </div>
-        </header>
+        <NavCob />
         
-        <main> 
-          <Hero />
+        <main>
+          {/*First section*/} 
+          <Hero
+            title={`Unleash the power of intuitive finance`} 
+            subtitle={`Say goodbye to the outdated financial tools. Every small business owner, regardless of the background, can now manage their business like a pro. Simple. Intuitive. And never boring.`} 
+            img={appimg}
+            toSection={`#intro`} 
+            />
+          {/*Second section*/}
           <Info /> 
+          {/*Third section - 6 cards*/}
           <Features /> 
+          {/*IA feature - 2 cards*/}
           <AI /> 
-          <Join />  
+          <Join 
+            title={`See where financial automation can take your business.`} 
+            subtitle={`The first financial tool you'll love. And the last one you'll ever need.`}
+            />  
         </main>
         
         <Foot />
